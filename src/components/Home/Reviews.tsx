@@ -42,24 +42,32 @@ export function Reviews() {
                   "mb-2.5 mr-3 flex-1 rounded-lg bg-black p-4 shadow-[12px_10px_0_#1AAF20]"
                 }
               >
-                <div className={"mb-4 flex justify-between text-xl font-black"}>
+                <div
+                  className={
+                    "mb-4 flex justify-between text-sm font-semibold md:text-xl lg:font-black"
+                  }
+                >
                   <span className={"max-w-[120px]"}>CE0, Poland</span>
-                  <span>Przemyslaw Kral</span>
+                  <span className={"max-w-[107px] text-right md:max-w-[180px]"}>
+                    Przemyslaw Kral
+                  </span>
                 </div>
-                <p>
-                  We’ve hired 5 enginners over the past 4months, conducting two
-                  interviews each and giving some a test task.
-                </p>
-                <p>The whole process was quick and effortless.</p>
-                <p>
-                  The options provided were strong, cutting our hiring cycle by
-                  half, if not more.
-                </p>
-                <p>
-                  We managed to find candidates on the local market, as we are
-                  based in poland, at local rates, much faster than using our
-                  in-house hiring department.
-                </p>
+                <div className={"text-sm font-light md:text-lg"}>
+                  <p>
+                    We’ve hired 5 enginners over the past 4months, conducting
+                    two interviews each and giving some a test task.
+                  </p>
+                  <p>The whole process was quick and effortless.</p>
+                  <p>
+                    The options provided were strong, cutting our hiring cycle
+                    by half, if not more.
+                  </p>
+                  <p>
+                    We managed to find candidates on the local market, as we are
+                    based in poland, at local rates, much faster than using our
+                    in-house hiring department.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -89,13 +97,19 @@ export function Reviews() {
                   "ml-3 mt-2.5 flex-1 rounded-lg bg-black p-4 shadow-[-12px_-10px_0_#1AAF20]"
                 }
               >
-                <div className={"mb-4 flex justify-between text-xl font-black"}>
+                <div
+                  className={
+                    "mb-4 flex justify-between text-sm font-semibold md:text-xl lg:font-black"
+                  }
+                >
                   <span className={"max-w-[120px]"}>
                     Founder at GuardianVets
                   </span>
-                  <span>John Dillon</span>
+                  <span className={"max-w-[107px] text-right md:max-w-[180px]"}>
+                    John Dillon
+                  </span>
                 </div>
-                <p>
+                <p className={"text-sm font-light md:text-lg"}>
                   The whole hiring process was quite easy for us. We didn’t have
                   a lot of time to screen and interview candidates, so Cheralds
                   took care of it. All of our engineers have relate to our idea,
@@ -131,13 +145,17 @@ export function Reviews() {
                   "mb-2.5 mr-3 flex-1 rounded-lg bg-black p-4 shadow-[12px_10px_0_#1AAF20]"
                 }
               >
-                <div className={"mb-4 flex justify-between text-xl font-black"}>
+                <div
+                  className={
+                    "mb-4 flex justify-between text-sm font-semibold md:text-xl lg:font-black"
+                  }
+                >
                   <span className={"max-w-[170px]"}>
                     Founder of Lovely Finance, Dubai
                   </span>
                   {/* <span>Przemyslaw Kral</span> */}
                 </div>
-                <p>
+                <p className={"text-sm font-light md:text-lg"}>
                   Got three Solidity devs and a DevsOps guy in just 3 days.
                   Flexible approach, good rates, and fast communication.
                   Definitely doing this again when needed.
@@ -171,11 +189,17 @@ export function Reviews() {
                   "ml-3 mt-2.5 flex-1 rounded-lg bg-black p-4 shadow-[-12px_-10px_0_#1AAF20]"
                 }
               >
-                <div className={"mb-4 flex justify-between text-xl font-black"}>
+                <div
+                  className={
+                    "mb-4 flex justify-between text-sm font-semibold md:text-xl lg:font-black"
+                  }
+                >
                   <span className={"max-w-[120px]"}>CEO, US</span>
-                  <span>Hugh Bartlett</span>
+                  <span className={"max-w-[107px] text-right md:max-w-[180px]"}>
+                    Hugh Bartlett
+                  </span>
                 </div>
-                <p>
+                <p className={"text-sm font-light md:text-lg"}>
                   Built a design department with Cheralds . Their designers
                   provided good portfolios and were very communicative on calls,
                   which is exactly what we were looking for. Would love to have

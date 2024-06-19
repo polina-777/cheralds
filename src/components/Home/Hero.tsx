@@ -11,7 +11,7 @@ export function Hero() {
       <Container>
         <div
           className={
-            "flex flex-col-reverse items-center justify-between gap-y-10 pb-12 pt-4 md:flex-row md:pt-12 lg:pb-8"
+            "flex flex-col items-center justify-between gap-y-10 pb-12 md:flex-row md:pt-12 lg:pb-8"
           }
         >
           <div className={"md:max-w-[354px] lg:max-w-[454px]"}>
@@ -30,7 +30,7 @@ export function Hero() {
               <Button>Get a quote</Button>
             </Link>
           </div>
-          <div className={"max-w-[438px]"}>
+          <div className={"max-w-[80vw] sm:max-w-[438px]"}>
             <Image
               src={MainIMG}
               alt={"Main image"}

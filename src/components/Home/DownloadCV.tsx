@@ -12,7 +12,7 @@ export function DownloadCV() {
         <div className={"flex items-center justify-between"}>
           <div className={"flex-1"}>
             <Title className={"mb-14 text-center md:mb-9 md:text-left"}>
-              Download CVs with rates – as easy <br className={"lg:hidden"} />
+              Get CVs with rates – as easy <br className={"lg:hidden"} />
               as picking cherries!
             </Title>
             <div className={"flex justify-between overflow-hidden"}>

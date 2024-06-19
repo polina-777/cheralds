@@ -49,7 +49,7 @@ export function HowHiringWorks() {
                   src={ArrDown}
                   alt={"Image"}
                   className={
-                    "absolute bottom-0 left-8 top-[110%] z-10 md:hidden"
+                    "absolute bottom-0 left-[10%] top-[110%] z-10 sm:left-14 md:hidden"
                   }
                 />
                 <Image
@@ -111,7 +111,7 @@ export function HowHiringWorks() {
                   src={ArrDown}
                   alt={"Image"}
                   className={
-                    "absolute bottom-0 left-8 top-[110%] z-10 md:hidden"
+                    "absolute bottom-0 left-[10%] top-[110%] z-10 sm:left-14 md:hidden"
                   }
                 />
               </div>
@@ -163,7 +163,7 @@ export function HowHiringWorks() {
                   src={ArrDown}
                   alt={"Image"}
                   className={
-                    "absolute bottom-0 left-8 top-[110%] z-10 md:hidden"
+                    "absolute bottom-0 left-[10%] top-[110%] z-10 sm:left-14 md:hidden"
                   }
                 />
                 <Image

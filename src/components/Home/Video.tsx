@@ -1,10 +1,4 @@
-import Image from "next/image";
-
 import { Container, Title } from "common/UI";
-
-import Poster from "./static/video-poster.jpg";
-
-//TODO Video
 
 export function Video() {
   return (
@@ -20,10 +14,34 @@ export function Video() {
             <Title component={"div"}>Listen to Liza</Title>
           </div>
           <div className={"flex-1"}>
-            <Image src={Poster} alt={"video"} />
-            {/* <video>
-              <source src="/blue.mp4" />
-            </video> */}
+            <video
+              className={"bg-white"}
+              poster={"./static/video/video-poster.jpg"}
+              src={"https://www.youtube.com/watch?v=ZvhFIblIWF8"}
+              controls
+            >
+              <source
+                src={"https://www.youtube.com/watch?v=ZvhFIblIWF8"}
+                className={"h-full w-full"}
+              />
+            </video>
+
+            <video
+              className={"bg-white"}
+              poster={"./static/video/video-poster.jpg"}
+              src={"./static/video/video.MOV"}
+              controls
+            >
+              <source
+                src={"./static/video/video.MOV"}
+                className={"h-full w-full"}
+              />
+            </video>
+
+            <iframe
+              src={"https://www.youtube.com/watch?v=ZvhFIblIWF8"}
+              allowFullScreen
+            />
           </div>
         </div>
       </Container>
