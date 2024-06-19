@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* drop-shadow-[1px_5px_70px_rgba(37,215,44,.8)] */

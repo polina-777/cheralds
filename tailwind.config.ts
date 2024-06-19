@@ -1,17 +1,27 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: ["var(--montserrat)", ...fontFamily.sans],
+        karantina: "var(--karantina)",
+        indie_flower: "var(--indie_flower)",
+      },
+      colors: {
+        green_ch: {
+          100: "#",
+          200: "#",
+          300: "#",
+          400: "#25D72C",
+          500: "#1AAF20",
+          600: "#",
+          700: "#106318",
+          800: "#08260B",
+          900: "#011A03",
+        },
       },
     },
   },
