@@ -32,15 +32,16 @@ export function SubscribeForm() {
   // });
 
   function onSubmit(data: Form) {
-    try {
-      fetch("api/subscribe", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-    } catch (err: unknown) {}
+    fetch("api/subscribe", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
   }
 
   return (

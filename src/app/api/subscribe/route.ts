@@ -9,21 +9,22 @@ export async function POST(req: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "google",
       auth: {
-        user: "stadnyk@gmail.com",
+        user: process.env.NEXT_PUBLIC_EMAIL,
         pass: process.env.NEXT_PUBLIC_PASSWORD,
       },
     });
 
     const mailOption = {
-      from: "stadnyk@gmail.com",
+      from: `Cheralds <${process.env.NEXT_PUBLIC_EMAIL}>`,
       to: "stadnyk.andy@gmail.com",
-      subject: "New Email",
-      html: `<h1>${email}</h1>`,
+      subject: "Hello New Email",
+      text: "Hello world?",
+      html: `<h1>${email}...?</h1>`,
     };
 
-    await transporter.sendMail(mailOption);
+    const info = await transporter.sendMail(mailOption);
 
-    return NextResponse.json({ email });
+    return NextResponse.json({ info, email });
   } catch (err) {
     return NextResponse.json({ mesage: "error" }, { status: 500 });
   }
