@@ -3,10 +3,6 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-console.log(process.env.VERCEL_URL);
-console.log(`https://${process.env.VERCEL_URL}/static/video.MOV`);
-
-
 export async function POST(req: NextRequest) {
   const { email } = await req.json();
   try {

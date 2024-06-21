@@ -16,9 +16,6 @@ const formSchema = z.object({
 
 type Form = z.infer<typeof formSchema>;
 
-console.log(process.env.VERCEL_URL);
-console.log(`https://${process.env.VERCEL_URL}/static/video.MOV`);
-
 export function SubscribeForm() {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
