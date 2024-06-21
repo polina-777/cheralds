@@ -31,6 +31,33 @@ const indie_flower = Indie_Flower({
 export const metadata: Metadata = {
   title: "Cheralds",
   description: "Welcome to Cheralds",
+  icons: {
+    icon: [
+      {
+        type: "image/png",
+        sizes: "32x32",
+        url: "/favicon-32x32.png",
+      },
+      {
+        type: "image/png",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+    ],
+    apple: {
+      url: "/apple-touch-icon.png",
+      sizes: "180x180",
+    },
+    other: {
+      rel: "mask-icon",
+      url: "/safari-pinned-tab.svg",
+      color: "#fff",
+    },
+  },
+  manifest: "/site.webmanifest",
+  other: {
+    "msapplication-TileColor": "#fff",
+  },
 };
 
 export default function RootLayout({
