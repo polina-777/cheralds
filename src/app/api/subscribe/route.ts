@@ -18,8 +18,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       message: "Email send successfully",
     });
-  } catch (err) {
-    return NextResponse.json({ message: err }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
 

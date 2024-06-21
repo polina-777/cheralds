@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareUpwork } from "react-icons/fa6";
 import { RiTwitterXFill } from "react-icons/ri";
 
-import { Container, Title } from "common/UI";
+import { Container } from "common/UI";
+import CheraldsText from "components/static/cheralds.svg";
 
 import { SubscribeForm } from "./SubscribeForm";
 
@@ -17,9 +19,11 @@ export function Footer() {
           }
         >
           <div className={"shrink-0"}>
-            <Title className={"text-2xl md:text-[32px] lg:text-[32px]"}>
-              Cheralds
-            </Title>
+            <Image
+              src={CheraldsText}
+              alt={"Text logo"}
+              className={"mb-2 w-full max-w-52"}
+            />
 
             <p className={"hidden font-light md:block"}>
               Cherries of the tech world hide here

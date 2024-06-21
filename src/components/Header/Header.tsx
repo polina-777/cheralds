@@ -12,7 +12,7 @@ import { Fragment, useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import { Button, ButtonBase, Container } from "common/UI";
-import Logo from "components/static/Logo.png";
+import Logo from "components/static/Logo.svg";
 
 import { cn } from "utils/cn";
 
@@ -58,7 +58,7 @@ export function Header() {
         <div className={"flex items-center justify-between gap-x-4 py-8"}>
           <Link href={"/"} className={"hidden lg:block"}>
             <Image
-              className={"max-w-[130px] drop-shadow-[1px_5px_20px_#106318]"}
+              className={"max-w-[160px] drop-shadow-[1px_5px_20px_#106318]"}
               src={Logo}
               alt={"Logo"}
             />

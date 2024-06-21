@@ -39,9 +39,13 @@ export function SubscribeForm() {
           "Content-Type": "application/json",
         },
       });
+
       const { message } = await res.json();
+
       setSuccess(message);
       setLoading(false);
+
+      form.reset();
 
       setTimeout(() => setSuccess(""), 4000);
     } catch (err) {
@@ -56,22 +60,33 @@ export function SubscribeForm() {
     <FormProvider {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={
-          "flex w-full flex-col justify-end gap-x-6 gap-y-4 sm:flex-row sm:items-center"
-        }
+        className={"w-full md:max-w-[540px]"}
       >
-        <div className={"flex-1 md:max-w-[390px]"}>
-          <FormTextInput<Form>
-            fieldName={"email"}
-            placeholder={"Enter your Email"}
-            className={{ wrapper: "mb-2" }}
-          />
-          {success && <p className={"text-green_ch-400"}>{success}</p>}
-          {error && <p className={"text-red-500"}>{error}</p>}
+        <div
+          className={
+            "mb-2 flex flex-col justify-end gap-x-6 gap-y-4 sm:flex-row sm:items-center"
+          }
+        >
+          <div className={"flex-1 md:max-w-[390px]"}>
+            <FormTextInput<Form>
+              fieldName={"email"}
+              placeholder={"Enter your Email"}
+            />
+          </div>
+          <Button type={"submit"} colorVariant={"white"} loading={loading}>
+            Subscribe
+          </Button>
         </div>
-        <Button type={"submit"} colorVariant={"white"} loading={loading}>
-          Subscribe
-        </Button>
+        {success && (
+          <p className={"ml-3 text-center text-green_ch-400 md:text-left"}>
+            {success}
+          </p>
+        )}
+        {!error && (
+          <p className={"ml-3 text-center text-red-500 md:text-left"}>
+            {error}
+          </p>
+        )}
       </form>
     </FormProvider>
   );
