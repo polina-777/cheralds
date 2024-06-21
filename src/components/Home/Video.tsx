@@ -64,6 +64,12 @@ export function Video() {
                   style={{ position: "absolute" }}
                 />
               )}
+              <video
+                controls
+                width={900}
+                height={600}
+                src={`https://${process.env.VERCEL_URL}/static/video.MOV`}
+              ></video>
             </div>
           </div>
         </div>
