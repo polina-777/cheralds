@@ -14,6 +14,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { Button, ButtonBase, Container } from "common/UI";
 import Logo from "components/static/Logo.svg";
 
+import { getBreakpointWidth } from "utils/breakpoints";
 import { cn } from "utils/cn";
 
 export const links = [
@@ -45,6 +46,7 @@ export const links = [
 
 export function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const body = document.querySelector("body");
@@ -52,8 +54,35 @@ export function Header() {
     body.style.overflow = menuIsOpen ? "hidden" : "";
   }, [menuIsOpen]);
 
+  useEffect(() => {
+    const windowWidth = document.documentElement.clientWidth;
+
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    if (windowWidth > getBreakpointWidth("md")) {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isVisible, setIsVisible]);
+
   return (
-    <header className={"fixed inset-x-0 top-0 z-50 w-full"}>
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 w-full transition-opacity duration-500",
+        {
+          "opacity-0": !isVisible,
+        },
+      )}
+    >
       <Container className={"max-w-[1250px]"}>
         <div className={"flex items-center justify-between gap-x-4 py-8"}>
           <Link href={"/"} className={"hidden lg:block"}>
