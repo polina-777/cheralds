@@ -26,8 +26,8 @@ export default async function Home() {
       <DogPow />
       <Reviews />
       <HowToGetCherryTree />
-/*      <Hand />
+     <Hand />
       {/* <Video /> */}
-    </> */
+    </> 
   );
 }
