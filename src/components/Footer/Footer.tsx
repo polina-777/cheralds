@@ -95,7 +95,7 @@ export function Footer() {
               <RiTwitterXFill className={"size-7"} />
             </Link>
             <Link
-              href={"#"}
+              href={"https://www.linkedin.com/company/cheralds/"}
               target={"_blank"}
               className={"text-black transition-colors hover:text-green_ch-700"}
             >
