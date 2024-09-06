@@ -27,7 +27,7 @@ export default async function Home() {
       <Reviews />
       <HowToGetCherryTree />
 {/*       <Hand />
-      <Video />
+      {/* <Video /> */}
     </> */}
   );
 }
